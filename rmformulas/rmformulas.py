@@ -10,10 +10,10 @@ from openpyxl import load_workbook
     '--output', '-o', required=True, help=u"output directory name.")
 def cli(input, output):
     """
-    Receive Excel file name or directory name as input argument.
-    Receive directory name in output argument.
-    Remove the formula in the Excel file received in the input argument
-    and save it in the directory received in the output argument.
+    Receive Excel file name or directory name as input option.
+    Receive directory name in output option.
+    Remove the formula in the Excel file received in the input option
+    and save it in the directory received in the output option.
     """
     xlsx_filelist = []
     try:
@@ -30,16 +30,16 @@ def cli(input, output):
                 xlsx_filelist.append(
                     os.path.join(input, _file))
             if len(xlsx_filelist) == 0:
-                print("Excel file is not exists.")
+                print("Excel file does not exist.")
                 return
         else:
-            print("input is illegal value.")
+            print("Input is illegal value.")
             return
 
         if not os.path.exists(output):
             os.makedirs(output)
         if not os.path.isdir(output):
-            print("output is illegal value.")
+            print("Output is illegal value.")
             return
 
         for xlsx in xlsx_filelist:
@@ -48,9 +48,9 @@ def cli(input, output):
             try:
                 book = load_workbook(xlsx, data_only=True)
                 book.save(output_path)
-                print("Succeed convert " + filename)
+                print("Succeed " + filename)
             except Exception:
-                print("Failed convert " + filename)
+                print("Failed " + filename)
 
     except Exception as e:
         print("Unexpected error occured.")
