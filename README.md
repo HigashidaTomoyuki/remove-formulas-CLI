@@ -18,7 +18,7 @@ pip uninstall rmformulas -y
 
 ### help
 ```bash
-rmformulas --name
+rmformulas --help
 ```
 
 ### remove formulas
@@ -27,7 +27,7 @@ rmformulas --name
 rmformulas --input <input file or dir> --output <output dir>
 ```
 
-### Options
+#### Options
 
 `--input, -i`: input file or directory name.
 
