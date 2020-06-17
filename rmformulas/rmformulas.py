@@ -9,8 +9,21 @@ from openpyxl import load_workbook
 @click.option(
     '--output', '-o', required=True, help=u"output directory name.")
 def cli(input, output):
+    """
+    Receive Excel file name or directory name as input argument.
+    Receive directory name in output argument.
+    Remove the formula in the Excel file received in the input argument
+    and save it in the directory received in the output argument.
+
+    Parameters
+    ----------
+    input : str
+        input file or directory name
+    output : str
+        output directory name
+    """
+    xlsx_filelist = []
     try:
-        xlsx_filelist = []
         if os.path.isfile(input) and input.endswith(".xlsx"):
             xlsx_filelist.append(input)
         elif os.path.isdir(input):
@@ -42,10 +55,7 @@ def cli(input, output):
                 print("Succeed convert " + filename)
             except Exception:
                 print("Failed convert " + filename)
+
     except Exception as e:
         print("Unexpected error occured.")
         print(e)
-
-
-if __name__ == "__main__":
-    cli()
