@@ -24,9 +24,12 @@ def cli(input, output):
     """
     xlsx_filelist = []
     try:
-        if os.path.isfile(input) and input.endswith(".xlsx"):
+        if os.path.exists(input) and \
+            os.path.isfile(input) and \
+                input.endswith(".xlsx"):
             xlsx_filelist.append(input)
-        elif os.path.isdir(input):
+        elif os.path.exists(input) and \
+                os.path.isdir(input):
             filelist = os.listdir(input)
             for _file in filelist:
                 if not _file.endswith(".xlsx"):
@@ -37,7 +40,7 @@ def cli(input, output):
                 print("Excel file is not exists.")
                 return
         else:
-            print("output is illegal value.")
+            print("input is illegal value.")
             return
 
         if not os.path.exists(output):
