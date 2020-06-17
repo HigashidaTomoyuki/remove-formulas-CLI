@@ -14,13 +14,6 @@ def cli(input, output):
     Receive directory name in output argument.
     Remove the formula in the Excel file received in the input argument
     and save it in the directory received in the output argument.
-
-    Parameters
-    ----------
-    input : str
-        input file or directory name
-    output : str
-        output directory name
     """
     xlsx_filelist = []
     try:
