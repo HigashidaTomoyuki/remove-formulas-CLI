@@ -1,22 +1,18 @@
+[![PyPI version](https://badge.fury.io/py/rmformulas.svg)](https://badge.fury.io/py/rmformulas)
+[![codecov](https://codecov.io/gh/team-care/remove-formulas-CLI/branch/master/graph/badge.svg)](https://codecov.io/gh/team-care/remove-formulas-CLI)
+
 # remove-formulas-CLI
 Remove formulas from Excel
 
 ## Installation
-Clone this repository.
-```bash
-git clone https://github.com/team-care/remove-formulas-CLI.git
-```
-
 Install with the following command.
 ```bash
-python setup.py install
+pip install rmformulas
 ```
 
 If you want to uninstall, execute the following command.
 ```bash
-python setup.py install --record files.txt
-cat files.txt | xargs rm -rf
-pip uninstall rmformulas -y
+pip uninstall -y rmformulas
 ```
 
 ## Usage
@@ -32,20 +28,12 @@ rmformulas --help
 rmformulas --input <input file or dir> --output <output dir>
 ```
 
+#### Warning
+If you specify the same directory for input and output, the original Excel file will be overwritten.
+
 #### Options
 
 `--input, -i`: input file or directory name.
 
 
 `--output, -o`: output directory name.
-
-## Test
-Install required modules.
-```bash
-pip install -r requirements.txt
-```
-
-Run the test with the command below.
-```bash
-pytest -vv --cov=rmformulas --cov-report=term-missing
-```

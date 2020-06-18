@@ -13,7 +13,7 @@ setup(
     author='HigashidaTomoyuki',
     license='MIT',
     url="https://github.com/team-care/remove-formulas-CLI",
-    packages=find_packages(),
+    packages=find_packages(exclude=["tests"]),
     install_requires=[
         'Click==7.1.2',
         'Pillow==7.1.2',
