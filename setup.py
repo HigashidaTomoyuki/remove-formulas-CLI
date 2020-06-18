@@ -6,7 +6,7 @@ with open("README.md", encoding="utf-8") as f:
 
 setup(
     name='rmformulas',
-    version='0.1',
+    version='1.0.0',
     description='Remove formulas CLI',
     long_description=readme,
     long_description_content_type="text/markdown",
