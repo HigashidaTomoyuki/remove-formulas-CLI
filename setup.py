@@ -16,7 +16,7 @@ setup(
     packages=find_packages(exclude=["tests"]),
     install_requires=[
         'Click==7.1.2',
-        'Pillow==7.1.2',
+        'Pillow==8.1.1',
         'openpyxl==3.0.3'
     ],
     entry_points={
