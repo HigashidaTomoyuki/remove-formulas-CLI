@@ -1,5 +1,5 @@
 [![PyPI version](https://badge.fury.io/py/rmformulas.svg)](https://badge.fury.io/py/rmformulas)
-[![codecov](https://codecov.io/gh/team-care/remove-formulas-CLI/branch/master/graph/badge.svg)](https://codecov.io/gh/team-care/remove-formulas-CLI)
+[![codecov](https://codecov.io/gh/HigashidaTomoyuki/remove-formulas-CLI/branch/master/graph/badge.svg?token=GVS7ZL920C)](https://codecov.io/gh/HigashidaTomoyuki/remove-formulas-CLI)
 
 # remove-formulas-CLI
 Remove formulas from Excel
@@ -33,7 +33,7 @@ If you specify the same directory for input and output, the original Excel file 
 
 #### Options
 
-`--input, -i`: input file or directory name.
+`--input, -i` : input file or directory name.
 
 
-`--output, -o`: output directory name.
+`--output, -o` : output directory name.
