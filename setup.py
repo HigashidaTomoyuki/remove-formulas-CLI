@@ -14,6 +14,6 @@ setup(
     license="MIT",
     url="https://github.com/HigashidaTomoyuki/remove-formulas-CLI",
     packages=find_packages(exclude=["tests"]),
-    install_requires=["Click==7.1.2", "Pillow==8.2.0", "openpyxl==3.0.3"],
+    install_requires=["Click==7.1.2", "Pillow==9.3.0", "openpyxl==3.0.3"],
     entry_points={"console_scripts": ["rmformulas=rmformulas.rmformulas:cli"]},
 )
